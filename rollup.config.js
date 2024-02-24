@@ -6,12 +6,17 @@ const packageJson = require("./package.json");
 const alias = require("@rollup/plugin-alias");
 
 export default {
-  input: "src/index.ts",
+  input: {
+    index: "src/index.ts",
+    pureIndex: "src/pureIndex.ts",
+  },
   output: [
     {
-      file: packageJson.main,
+      //file: packageJson.main,
       format: "esm",
-      sourcemap: true,
+      //sourcemap: true,
+      dir: 'dist',
+      entryFileNames: '[name].js',
     },
   ],
   plugins: [

@@ -1,3 +1,7 @@
+> 基于原版修改，新增无动画版本，大大减小打包体积（约65%），其他功能与原版一致。
+> 
+> 无动画版本引入：`import * from '@raintian/react-dnd-treeview/pure'`
+
 # React DnD TreeView
 
 A draggable and droppable React treeview component.  
@@ -20,7 +24,7 @@ See [Migration Guide](MIGRATION.md) for information on breaking changes and migr
 ### Installation
 
 ```shell
-$ npm i react-dnd @minoru/react-dnd-treeview
+$ npm i react-dnd @raintian/react-dnd-treeview
 ```
 
 ### Usage
@@ -31,7 +35,7 @@ import {
   Tree,
   getBackendOptions,
   MultiBackend,
-} from "@minoru/react-dnd-treeview";
+} from "@raintian/react-dnd-treeview";
 import { DndProvider } from "react-dnd";
 import initialData from "./sample-default.json";
 
@@ -99,7 +103,7 @@ For more information on `TouchBackend`, please see [here](https://react-dnd.gith
 import { DndProvider } from "react-dnd";
 import { HTML5Backend, HTML5BackendOptions } from "react-dnd-html5-backend";
 import {TouchBackend, TouchBackendOptions} from "react-dnd-touch-backend"
-import {Tree, MultiBackend, getBackendOptions} from "@minoru/react-dnd-treeview"
+import {Tree, MultiBackend, getBackendOptions} from "@raintian/react-dnd-treeview"
 
 const touchOptions: Partial<TouchBackendOptions> = {
   // some options

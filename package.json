@@ -1,7 +1,7 @@
 {
   "name": "@rainetian/react-dnd-treeview",
   "description": "A draggable / droppable React-based treeview component.",
-  "version": "0.0.1-alpha.1",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,8 +22,20 @@
     "hierarchical data"
   ],
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./pure": {
+      "import": {
+        "types": "./dist/pureIndex.d.ts",
+        "default": "./dist/pureIndex.js"
+      }
+    }
+  },
   "files": [
     "dist"
   ],

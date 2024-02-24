@@ -1,0 +1,23 @@
+import React, { forwardRef } from "react";
+import { DragLayer } from "./DragLayer";
+import { Container } from "./PureContainer";
+import { Providers } from "./providers";
+import { TreeMethods, TreeProps } from "./types";
+
+function TreeInner<T>(
+  props: Omit<TreeProps,'enableAnimateExpand'>,
+  ref: React.ForwardedRef<TreeMethods>
+) {
+  return (
+    <Providers {...props} treeRef={ref}>
+      {props.dragPreviewRender && <DragLayer />}
+      <Container parentId={props.rootId} depth={0} />
+    </Providers>
+  );
+}
+
+const PureTree = forwardRef(TreeInner) as <T = unknown>(
+  props: TreeProps<T> & { ref?: React.ForwardedRef<TreeMethods> }
+) => ReturnType<typeof TreeInner>;
+
+export { PureTree };

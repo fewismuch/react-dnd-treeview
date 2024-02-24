@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext, ReactElement } from "react";
 import { getEmptyImage } from "react-dnd-html5-backend";
-import { Container } from "./Container";
+import { Container } from "./PureContainer";
 import {
   useTreeContext,
   useDragNode,
@@ -79,10 +79,7 @@ export const Node = <T,>(props: Props): ReactElement | null => {
   return (
     <Component ref={containerRef} className={className} role="listitem">
       {treeContext.render(item, params)}
-      {enableAnimateExpand && params.hasChild && (
-        <Container parentId={props.id} depth={props.depth + 1} />
-      )}
-      {!enableAnimateExpand && params.hasChild && open && (
+      {params.hasChild && open && (
         <Container parentId={props.id} depth={props.depth + 1} />
       )}
     </Component>

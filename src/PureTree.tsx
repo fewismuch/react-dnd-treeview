@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 import { TreeMethods, TreeProps } from "./types";
 
 function TreeInner<T>(
-  props: Omit<TreeProps,'enableAnimateExpand'>,
+  props: TreeProps<T>,
   ref: React.ForwardedRef<TreeMethods>
 ) {
   return (
@@ -16,8 +16,8 @@ function TreeInner<T>(
   );
 }
 
-const PureTree = forwardRef(TreeInner) as <T = unknown>(
+const Tree = forwardRef(TreeInner) as <T = unknown>(
   props: TreeProps<T> & { ref?: React.ForwardedRef<TreeMethods> }
 ) => ReturnType<typeof TreeInner>;
 
-export { PureTree };
+export { Tree };

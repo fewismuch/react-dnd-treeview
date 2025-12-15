@@ -1,5 +1,29 @@
 # Change Log
 
+## 3.5.2
+
+_Apr 21, 2025_
+
+### Fixed
+
+- Incorrect element detection for `dropTarget` class.
+
+## 3.5.0
+
+_Jan 13, 2025_
+
+### Added
+
+- Made `listItem` key in `classes` API support callback function.
+
+### Fixed
+
+- Drop is canceled even though placeholder is visible.
+
+### Changed
+
+- React v17 is no longer supported.
+
 ## 3.4.4
 
 _Mar 23, 2023_

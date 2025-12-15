@@ -1,7 +1,7 @@
 {
   "name": "@rainetian/react-dnd-treeview",
   "description": "A draggable / droppable React-based treeview component.",
-  "version": "1.0.0",
+  "version": "3.5.3",
   "license": "MIT",
   "repository": {
     "type": "git",
